@@ -10,14 +10,14 @@
 #import <AVFoundation/AVFoundation.h>
 @interface ViewController : UIViewController<AVAudioPlayerDelegate>
 - (IBAction)button1:(UIButton *)sender;
-- (IBAction)stopbutton:(UIButton *)sender;
-- (IBAction)restartbutton:(UIButton *)sender;
 - (IBAction)creabutton:(UIBarButtonItem *)sender;
 @property (weak, nonatomic) IBOutlet UILabel *countdownlabel;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datepicker;
 @property (weak, nonatomic) IBOutlet UILabel *startlabel;
 - (IBAction)valuechangedpicker:(UIDatePicker *)sender;
 - (IBAction)okbutton:(UIBarButtonItem *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *btnA;
+@property (weak, nonatomic) IBOutlet UIButton *btnB;
 @property(nonatomic, getter = isHidden)BOOL hidden;
 @end
 

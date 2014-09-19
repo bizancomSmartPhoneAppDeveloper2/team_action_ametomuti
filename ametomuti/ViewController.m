@@ -20,6 +20,7 @@
     NSInteger hour;
     NSInteger minute;
     BOOL isZero;//00:00:00を通過したかどうか、マイナスカウントを行うために必要
+    BOOL isAction;
     AVAudioPlayer *audioPlayer;
 }
 
@@ -27,10 +28,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.btnB.hidden = YES;
     hours = 0;
     minuts = 0;
     seconds = 0;
     isZero = 0;
+    isAction = YES;
     [self showdatepickerview];//ピッカータイマーを表示しておく
     
     //タイマースタートと同時に効果音鳴らす
@@ -114,15 +117,8 @@
     }
     
 
-- (IBAction)stopbutton:(UIButton *)sender {
-    [timer invalidate]; // タイマーを停止する
-}
 
-- (IBAction)restartbutton:(UIButton *)sender {
-    //停止ボタン押されないままタイマー動作中に押される事を考慮して、一旦タイマーを止めてから再会する
-    [timer invalidate];
-    [self timer];
-}
+
 
 - (IBAction)creabutton:(UIBarButtonItem *)sender {
     [timer invalidate];
@@ -132,6 +128,15 @@
     isZero = NO;
     [self showtimerlabel];
     
+}
+- (IBAction)Action {
+    if (isAction) {
+        [timer invalidate];
+        isAction = NO;
+    }else{
+        [self timer];
+        isAction = YES;
+    }
 }
 
 - (IBAction)valuechangedpicker:(UIDatePicker *)sender {
@@ -194,6 +199,8 @@
             }else if (hours == 0){
                 //hourも0時間ならば00:00:00を通過したことを記録
                 isZero = YES;
+                self.btnA.hidden = YES;
+                self.btnB.hidden = NO;
             }
         }
     }
