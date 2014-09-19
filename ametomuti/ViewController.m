@@ -26,6 +26,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.btnB.hidden = YES;
     hours = 0;
     minuts = 0;
     seconds = 0;
@@ -76,6 +77,7 @@
     [timer invalidate];
     [self timer];
 }
+
 
 - (IBAction)creabutton:(UIBarButtonItem *)sender {
     [timer invalidate];
@@ -143,6 +145,8 @@
             }else if (hours == 0){
                 //hourも0時間ならば00:00:00を通過したことを記録
                 isZero = YES;
+                self.btnA.hidden = YES;
+                self.btnB.hidden = NO;
             }
         }
     }
@@ -194,17 +198,17 @@
     components = [calender components:flags fromDate:self.datepicker.date];
     hour = components.hour;
     minute = components.minute;
-    NSLog(@"%ld時間 %ld分", hour,minute);
+    NSLog(@"%d時間 %d分",hour,minuts);
 }
 
 -(void)showtimerlabel{
     //タイマーラベルを表示する
-    self.countdownlabel.text = [NSString stringWithFormat:@"%02ld:%02ld:%02ld",hours,minuts,seconds];
+    self.countdownlabel.text = [NSString stringWithFormat:@"%02ld:%02ld:%02ld",(long)hours,(long)minuts,(long)seconds];
 }
 
 -(void)mainasushowtimerlabel{
     //マイナスのタイマーラベルを表示する
-    self.countdownlabel.text = [NSString stringWithFormat:@"- %02ld:%02ld:%02ld",hours,minuts,seconds];
+    self.countdownlabel.text = [NSString stringWithFormat:@"- %02ld:%02ld:%02ld",(long)hours,(long)minuts,(long)seconds];
 }
 
 @end
