@@ -10,6 +10,7 @@
 
 
 @interface ViewController : UIViewController
+- (IBAction)button1:(UIButton *)sender;
 - (IBAction)stopbutton:(UIButton *)sender;
 - (IBAction)restartbutton:(UIButton *)sender;
 - (IBAction)creabutton:(UIBarButtonItem *)sender;
@@ -17,8 +18,6 @@
 @property (weak, nonatomic) IBOutlet UIDatePicker *datepicker;
 - (IBAction)valuechangedpicker:(UIDatePicker *)sender;
 - (IBAction)okbutton:(UIBarButtonItem *)sender;
-@property (weak, nonatomic) IBOutlet UIButton *btnA;
-@property (weak, nonatomic) IBOutlet UIButton *btnB;
 @property(nonatomic, getter = isHidden)BOOL hidden;
 @end
 
