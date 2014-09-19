@@ -42,29 +42,52 @@
 }
 
 - (IBAction)button1:(UIButton *)sender {
-    //
     [timer invalidate];
     hours = 0;
     minuts = 0;
     seconds = 0;
-    minuts = 2;
-    [self showtimerlabel];
-    minuts=1;seconds=60;
-    [self timer];
+    switch (sender.tag) {
+        case 0:
+            minuts = 3;
+            break;
+        case 1:
+            minuts = 5;
+            break;
+        case 2:
+            minuts = 8;
+            break;
+        case 3:
+            minuts = 10;
+            break;
+        case 4:
+            minuts = 30;
+            break;
+        case 5:
+            hours = 1;
+            minuts = 00;
+            break;
+        case 6:
+            hours = 1;
+            minuts = 01;
+            break;
+        case 7:
+            hours = 2;
+            minuts = 00;
+            break;
+        case 8:
+            hours = 3;
+            minuts = 00;
+            break;
     }
-
-- (IBAction)button2:(UIButton *)sender {
-    //5分タイマーのボタン
-    //タイマー動作中に押される事を考慮して一旦タイマー止めて、時間を初期化
-    [timer invalidate];
-    hours = 0;
-    minuts = 0;
-    seconds = 0;
-    //00:05:00を表示
-    minuts = 5;
+    
     [self showtimerlabel];
-    //タイマーを始める
-    minuts=4;seconds=60;
+    if (minuts == 00) {
+        minuts = 60;
+        hours = (hours-1);
+    }
+    minuts = (minuts-1);
+    seconds=60;
+    
     [self timer];
 }
 
