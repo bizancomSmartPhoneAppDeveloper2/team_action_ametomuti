@@ -11,7 +11,6 @@
 
 @interface ViewController : UIViewController
 - (IBAction)button1:(UIButton *)sender;
-- (IBAction)button2:(UIButton *)sender;
 - (IBAction)stopbutton:(UIButton *)sender;
 - (IBAction)restartbutton:(UIButton *)sender;
 - (IBAction)creabutton:(UIBarButtonItem *)sender;
