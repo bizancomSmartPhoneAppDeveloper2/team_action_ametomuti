@@ -194,7 +194,7 @@
     components = [calender components:flags fromDate:self.datepicker.date];
     hour = components.hour;
     minute = components.minute;
-    NSLog(@"%ld時間 %ld分", hour, minute);
+    NSLog(@"%ld時間 %ld分", hour,minute);
 }
 
 -(void)showtimerlabel{
