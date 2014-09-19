@@ -26,6 +26,7 @@
 		07C802F319C2DFB4001A91BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C802D519C2DFB3001A91BB /* UIKit.framework */; };
 		07C802FB19C2DFB4001A91BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07C802F919C2DFB4001A91BB /* InfoPlist.strings */; };
 		07C802FD19C2DFB4001A91BB /* ametomutiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C802FC19C2DFB4001A91BB /* ametomutiTests.m */; };
+		7BDF4A2E19CC760200DAD01E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0732522019CBF29200B9A1D7 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,9 @@
 		07C802F819C2DFB4001A91BB /* ametomutiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ametomutiTests-Info.plist"; sourceTree = "<group>"; };
 		07C802FA19C2DFB4001A91BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07C802FC19C2DFB4001A91BB /* ametomutiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ametomutiTests.m; sourceTree = "<group>"; };
+		7BDF4A3019CC77FD00DAD01E /* youNeedMoreEffort.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = youNeedMoreEffort.m4a; sourceTree = "<group>"; };
+		7BDF4A3119CC77FD00DAD01E /* neverMind.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = neverMind.m4a; sourceTree = "<group>"; };
+		7BDF4A3219CC77FD00DAD01E /* goodJobMen.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = goodJobMen.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BDF4A2E19CC760200DAD01E /* AudioToolbox.framework in Frameworks */,
 				0732522319CBF46000B9A1D7 /* AVFoundation.framework in Frameworks */,
 				07C802D419C2DFB3001A91BB /* CoreGraphics.framework in Frameworks */,
 				07C802D619C2DFB3001A91BB /* UIKit.framework in Frameworks */,
@@ -132,6 +137,7 @@
 				07C802E619C2DFB4001A91BB /* ViewController.h */,
 				07C802E719C2DFB4001A91BB /* ViewController.m */,
 				07C802E919C2DFB4001A91BB /* Images.xcassets */,
+				7BDF4A2F19CC763400DAD01E /* SoundEffects */,
 				07C802D819C2DFB3001A91BB /* Supporting Files */,
 			);
 			path = ametomuti;
@@ -168,6 +174,16 @@
 				07C802F919C2DFB4001A91BB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7BDF4A2F19CC763400DAD01E /* SoundEffects */ = {
+			isa = PBXGroup;
+			children = (
+				7BDF4A3019CC77FD00DAD01E /* youNeedMoreEffort.m4a */,
+				7BDF4A3119CC77FD00DAD01E /* neverMind.m4a */,
+				7BDF4A3219CC77FD00DAD01E /* goodJobMen.m4a */,
+			);
+			name = SoundEffects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

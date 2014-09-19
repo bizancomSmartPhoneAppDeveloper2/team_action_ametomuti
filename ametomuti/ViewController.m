@@ -22,6 +22,8 @@
     BOOL isZero;//00:00:00を通過したかどうか、マイナスカウントを行うために必要
     BOOL isAction;
     AVAudioPlayer *audioPlayer;
+    SystemSoundID goodJob;//効果音
+    
 }
 
 - (void)viewDidLoad
@@ -52,6 +54,12 @@
     // 自分自身をデリゲートに設定
     [audioPlayer setDelegate:self];
     
+}
+
+{
+    NSString *SoundPath = [[NSBundle mainBundle] pathForReaource:goodJobs]
+
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -257,12 +265,12 @@
 
 -(void)showtimerlabel{
     //タイマーラベルを表示する
-    self.countdownlabel.text = [NSString stringWithFormat:@"%02ld:%02ld:%02ld",hours,minuts,seconds];
+    self.countdownlabel.text = [NSString stringWithFormat:@"%02ld:%02ld.%02ld",hours,minuts,seconds];
 }
 
 -(void)mainasushowtimerlabel{
     //マイナスのタイマーラベルを表示する
-    self.countdownlabel.text = [NSString stringWithFormat:@"- %02ld:%02ld:%02ld",hours,minuts,seconds];
+    self.countdownlabel.text = [NSString stringWithFormat:@"- %02ld:%02ld.%02ld",hours,minuts,seconds];
 }
 
 -(void)showstartlabel{
