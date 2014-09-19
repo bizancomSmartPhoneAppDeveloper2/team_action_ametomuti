@@ -145,8 +145,7 @@
             }else if (hours == 0){
                 //hourも0時間ならば00:00:00を通過したことを記録
                 isZero = YES;
-                self.btnA.hidden = YES;
-                self.btnB.hidden = NO;
+                
             }
         }
     }
