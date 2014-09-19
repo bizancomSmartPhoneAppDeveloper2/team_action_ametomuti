@@ -20,6 +20,7 @@
     NSInteger hour;
     NSInteger minute;
     BOOL isZero;//00:00:00を通過したかどうか、マイナスカウントを行うために必要
+    AVAudioPlayer *audioPlayer;
 }
 
 - (void)viewDidLoad
@@ -31,6 +32,22 @@
     seconds = 0;
     isZero = 0;
     [self showdatepickerview];//ピッカータイマーを表示しておく
+    
+    //タイマースタートと同時に効果音鳴らす
+    NSError *error = nil;
+    // 再生する audio ファイルのパスを取得
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"piiii" ofType:@"MP3"];
+    // パスから、再生するURLを作成する
+    NSURL *url = [[NSURL alloc] initFileURLWithPath:path];
+    // auido を再生するプレイヤーを作成する
+    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    // エラーが起きたとき
+    if ( error != nil )
+    {
+        NSLog(@"Error %@", [error localizedDescription]);
+    }
+    // 自分自身をデリゲートに設定
+    [audioPlayer setDelegate:self];
     
 }
 
@@ -77,6 +94,10 @@
             hours = 3;
             minuts = 00;
             break;
+        case 9:
+            hours = 5;
+            minuts = 00;
+            break;
     }
     
     [self showtimerlabel];
@@ -88,7 +109,10 @@
     seconds=60;
     
     [self timer];
-}
+    [self showstartlabel];
+    [audioPlayer play];
+    }
+    
 
 - (IBAction)stopbutton:(UIButton *)sender {
     [timer invalidate]; // タイマーを停止する
@@ -129,6 +153,10 @@
     [self showtimerlabel];
     //タイマー始める
     [self timer];
+    [self showstartlabel];
+    [audioPlayer play];
+
+    
 
 }
 
@@ -228,6 +256,10 @@
 -(void)mainasushowtimerlabel{
     //マイナスのタイマーラベルを表示する
     self.countdownlabel.text = [NSString stringWithFormat:@"- %02ld:%02ld:%02ld",hours,minuts,seconds];
+}
+
+-(void)showstartlabel{
+    self.startlabel.text = @"ミッションスタート";
 }
 
 @end

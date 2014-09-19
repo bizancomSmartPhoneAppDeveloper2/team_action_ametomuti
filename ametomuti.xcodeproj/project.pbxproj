@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0732521919CBD5D200B9A1D7 /* lgi01a201408301100.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0732521819CBD5D200B9A1D7 /* lgi01a201408301100.jpg */; };
+		0732521B19CBD7F000B9A1D7 /* lgi01a201405090500.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0732521A19CBD7F000B9A1D7 /* lgi01a201405090500.jpg */; };
+		0732521D19CBE4BA00B9A1D7 /* web-hosting.png in Resources */ = {isa = PBXBuildFile; fileRef = 0732521C19CBE4BA00B9A1D7 /* web-hosting.png */; };
+		0732521F19CBEEBB00B9A1D7 /* piiii.MP3 in Resources */ = {isa = PBXBuildFile; fileRef = 0732521E19CBEEBB00B9A1D7 /* piiii.MP3 */; };
+		0732522319CBF46000B9A1D7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0732522219CBF46000B9A1D7 /* AVFoundation.framework */; };
 		07C802D219C2DFB3001A91BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C802D119C2DFB3001A91BB /* Foundation.framework */; };
 		07C802D419C2DFB3001A91BB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C802D319C2DFB3001A91BB /* CoreGraphics.framework */; };
 		07C802D619C2DFB3001A91BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C802D519C2DFB3001A91BB /* UIKit.framework */; };
@@ -34,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0732521819CBD5D200B9A1D7 /* lgi01a201408301100.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lgi01a201408301100.jpg; sourceTree = "<group>"; };
+		0732521A19CBD7F000B9A1D7 /* lgi01a201405090500.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lgi01a201405090500.jpg; sourceTree = "<group>"; };
+		0732521C19CBE4BA00B9A1D7 /* web-hosting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "web-hosting.png"; sourceTree = "<group>"; };
+		0732521E19CBEEBB00B9A1D7 /* piiii.MP3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piiii.MP3; sourceTree = "<group>"; };
+		0732522019CBF29200B9A1D7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0732522219CBF46000B9A1D7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		07C802CE19C2DFB3001A91BB /* ametomuti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ametomuti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C802D119C2DFB3001A91BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		07C802D319C2DFB3001A91BB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0732522319CBF46000B9A1D7 /* AVFoundation.framework in Frameworks */,
 				07C802D419C2DFB3001A91BB /* CoreGraphics.framework in Frameworks */,
 				07C802D619C2DFB3001A91BB /* UIKit.framework in Frameworks */,
 				07C802D219C2DFB3001A91BB /* Foundation.framework in Frameworks */,
@@ -101,6 +113,8 @@
 		07C802D019C2DFB3001A91BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0732522219CBF46000B9A1D7 /* AVFoundation.framework */,
+				0732522019CBF29200B9A1D7 /* AudioToolbox.framework */,
 				07C802D119C2DFB3001A91BB /* Foundation.framework */,
 				07C802D319C2DFB3001A91BB /* CoreGraphics.framework */,
 				07C802D519C2DFB3001A91BB /* UIKit.framework */,
@@ -126,6 +140,10 @@
 		07C802D819C2DFB3001A91BB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0732521E19CBEEBB00B9A1D7 /* piiii.MP3 */,
+				0732521C19CBE4BA00B9A1D7 /* web-hosting.png */,
+				0732521A19CBD7F000B9A1D7 /* lgi01a201405090500.jpg */,
+				0732521819CBD5D200B9A1D7 /* lgi01a201408301100.jpg */,
 				07C802D919C2DFB3001A91BB /* ametomuti-Info.plist */,
 				07C802DA19C2DFB3001A91BB /* InfoPlist.strings */,
 				07C802DD19C2DFB3001A91BB /* main.m */,
@@ -231,6 +249,10 @@
 				07C802EA19C2DFB4001A91BB /* Images.xcassets in Resources */,
 				07C802DC19C2DFB3001A91BB /* InfoPlist.strings in Resources */,
 				07C802E519C2DFB4001A91BB /* Main.storyboard in Resources */,
+				0732521919CBD5D200B9A1D7 /* lgi01a201408301100.jpg in Resources */,
+				0732521F19CBEEBB00B9A1D7 /* piiii.MP3 in Resources */,
+				0732521B19CBD7F000B9A1D7 /* lgi01a201405090500.jpg in Resources */,
+				0732521D19CBE4BA00B9A1D7 /* web-hosting.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
