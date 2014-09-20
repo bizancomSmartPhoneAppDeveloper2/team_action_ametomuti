@@ -30,12 +30,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.btnB.hidden = YES;
     hours = 0;
     minuts = 0;
     seconds = 0;
     isZero = 0;
-    isAction = YES;
     [self showdatepickerview];//ピッカータイマーを表示しておく
     
     
@@ -151,6 +149,8 @@
 }
 
 - (IBAction)okbutton:(UIBarButtonItem *)sender {
+    [self.datepicker setHidden:YES];
+    [self.btnA setHidden:NO];
     [timer invalidate]; // タイマー動作中の可能性もあるので一旦タイマーを停止する
     //タイマー動作中の可能性もあるので初期化
     hours = 0;
@@ -205,8 +205,8 @@
             }else if (hours == 0){
                 //hourも0時間ならば00:00:00を通過したことを記録
                 isZero = YES;
-                self.btnA.hidden = YES;
-                self.btnB.hidden = NO;
+                [self.btnA setHidden:YES];
+                [self.btnB setHidden:NO];
             }
         }
     }
