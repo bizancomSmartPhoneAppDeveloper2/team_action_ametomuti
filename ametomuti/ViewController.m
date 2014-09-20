@@ -98,7 +98,7 @@
             break;
         case 6:
             hours = 1;
-            minuts = 01;
+            minuts = 30;
             break;
         case 7:
             hours = 2;
