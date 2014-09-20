@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
+
+
 @interface ViewController : UIViewController<AVAudioPlayerDelegate>
 - (IBAction)button1:(UIButton *)sender;
 - (IBAction)creabutton:(UIBarButtonItem *)sender;
@@ -18,7 +21,6 @@
 - (IBAction)okbutton:(UIBarButtonItem *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *btnA;
 @property (weak, nonatomic) IBOutlet UIButton *btnB;
-@property(nonatomic, getter = isHidden)BOOL hidden;
 @end
 
 

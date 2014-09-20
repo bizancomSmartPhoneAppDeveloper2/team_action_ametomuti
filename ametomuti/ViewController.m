@@ -22,19 +22,20 @@
     BOOL isZero;//00:00:00を通過したかどうか、マイナスカウントを行うために必要
     BOOL isAction;
     AVAudioPlayer *audioPlayer;
+    
+    
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.btnB.hidden = YES;
     hours = 0;
     minuts = 0;
     seconds = 0;
     isZero = 0;
-    isAction = YES;
     [self showdatepickerview];//ピッカータイマーを表示しておく
+    
     
     //タイマースタートと同時に効果音鳴らす
     NSError *error = nil;
@@ -52,6 +53,9 @@
     // 自分自身をデリゲートに設定
     [audioPlayer setDelegate:self];
     
+   
+
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -145,6 +149,8 @@
 }
 
 - (IBAction)okbutton:(UIBarButtonItem *)sender {
+    [self.datepicker setHidden:YES];
+    [self.btnA setHidden:NO];
     [timer invalidate]; // タイマー動作中の可能性もあるので一旦タイマーを停止する
     //タイマー動作中の可能性もあるので初期化
     hours = 0;
@@ -199,8 +205,8 @@
             }else if (hours == 0){
                 //hourも0時間ならば00:00:00を通過したことを記録
                 isZero = YES;
-                self.btnA.hidden = YES;
-                self.btnB.hidden = NO;
+                [self.btnA setHidden:YES];
+                [self.btnB setHidden:NO];
             }
         }
     }
@@ -257,17 +263,77 @@
 
 -(void)showtimerlabel{
     //タイマーラベルを表示する
-    self.countdownlabel.text = [NSString stringWithFormat:@"%02ld:%02ld:%02ld",hours,minuts,seconds];
+    self.countdownlabel.text = [NSString stringWithFormat:@"%02ld:%02ld.%02ld",hours,minuts,seconds];
 }
 
 -(void)mainasushowtimerlabel{
     //マイナスのタイマーラベルを表示する
-    self.countdownlabel.text = [NSString stringWithFormat:@"- %02ld:%02ld:%02ld",hours,minuts,seconds];
+    self.countdownlabel.text = [NSString stringWithFormat:@"- %02ld:%02ld.%02ld",hours,minuts,seconds];
 }
 
 -(void)showstartlabel{
     self.startlabel.text = @"ミッションスタート";
+    
 }
+
+
+
+-(void)PreiseVoice//賞賛音声の入れ物です。
+{
+    CFBundleRef maingundle = CFBundleGetMainBundle();
+    CFURLRef soundfileURLRef;
+    soundfileURLRef = CFBundleCopyResourceURL(maingundle, (CFStringRef)@"GoodJobMen",CFSTR("mp3"),NULL);
+    UInt32 soundID;
+    AudioServicesCreateSystemSoundID(soundfileURLRef, &soundID);
+    AudioServicesPlaySystemSound(soundID);
+    
+}
+
+-(void)ScoldVoice//叱責音声の入れ物です。
+{
+    CFBundleRef maingundle = CFBundleGetMainBundle();
+    CFURLRef soundfileURLRef;
+    soundfileURLRef = CFBundleCopyResourceURL(maingundle, (CFStringRef)@"YouNeedMoreEffort",CFSTR("mp3"),NULL);
+    UInt32 soundID;
+    AudioServicesCreateSystemSoundID(soundfileURLRef, &soundID);
+    AudioServicesPlaySystemSound(soundID);
+    
+}
+
+
+- (IBAction)btnA:(UIButton*)sender
+{
+    [self PreiseVoice];
+    
+}
+- (IBAction)btnB:(UIButton*)sender
+{
+    [self ScoldVoice];
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end
 

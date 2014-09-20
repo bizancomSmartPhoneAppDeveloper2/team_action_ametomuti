@@ -184,7 +184,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <action selector="button1:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pVK-Rk-4xZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6V-dX-Ctd">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6V-dX-Ctd">
                                 <rect key="frame" x="116" y="219" width="73" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="start/stop" backgroundImage="lgi01a201405090500.jpg">
@@ -193,10 +193,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </state>
                                 <connections>
                                     <action selector="Action" destination="vXZ-lx-hvc" eventType="touchUpInside" id="LwU-de-qTp"/>
+                                    <action selector="btnA:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vzf-ZD-XHi"/>
                                     <segue destination="CJ4-jI-Cdt" kind="modal" id="XyW-H3-0eP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQ1-F4-DnF">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQ1-F4-DnF">
                                 <rect key="frame" x="116" y="219" width="73" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="start/stop" backgroundImage="lgi01a201408301100.jpg">
@@ -205,6 +206,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </state>
                                 <connections>
                                     <action selector="Action" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JJD-eo-Bgo"/>
+                                    <action selector="btnB:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mro-yY-cJt"/>
                                     <segue destination="YWm-L2-2D6" kind="modal" id="bgv-ss-GZq"/>
                                 </connections>
                             </button>
@@ -242,10 +244,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="-62" y="-56"/>
         </scene>
-        <!--View Controller-->
+        <!--Success View Controller-->
         <scene sceneID="IoJ-9n-pz9">
             <objects>
-                <viewController id="CJ4-jI-Cdt" sceneMemberID="viewController">
+                <viewController id="CJ4-jI-Cdt" userLabel="Success View Controller" customClass="SuccessViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iel-hd-z81"/>
                         <viewControllerLayoutGuide type="bottom" id="Nvv-z9-FdH"/>
@@ -271,6 +273,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F6w-nB-T9u">
+                                <rect key="frame" x="55" y="55" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -279,10 +285,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="646" y="-230"/>
         </scene>
-        <!--View Controller-->
+        <!--Fail View Controller-->
         <scene sceneID="1cV-mL-ApY">
             <objects>
-                <viewController id="YWm-L2-2D6" sceneMemberID="viewController">
+                <viewController id="YWm-L2-2D6" userLabel="Fail View Controller" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lC6-Gz-3wM"/>
                         <viewControllerLayoutGuide type="bottom" id="CjI-oO-v5c"/>
@@ -307,6 +313,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gJy-cN-NAC">
+                                <rect key="frame" x="47" y="61" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -327,6 +337,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Pys-M0-xgM"/>
+        <segue reference="cnV-1d-JpK"/>
     </inferredMetricsTieBreakers>
 </document>
