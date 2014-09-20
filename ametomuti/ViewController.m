@@ -20,7 +20,7 @@
     NSInteger hour;
     NSInteger minute;
     BOOL isZero;//00:00:00を通過したかどうか、マイナスカウントを行うために必要
-    BOOL isAction;
+    BOOL isAction;//タイマーが動作中かどうか
     AVAudioPlayer *audioPlayer;
     
     
@@ -34,8 +34,13 @@
     minuts = 0;
     seconds = 0;
     isZero = 0;
+    isAction = 0;
     [self showdatepickerview];//ピッカータイマーを表示しておく
-    
+    self.imageview.hidden = YES;
+    self.startbuttonimage.hidden = NO;
+    self.creabuttonimage.hidden = YES;
+       
+
     
     //タイマースタートと同時に効果音鳴らす
     NSError *error = nil;
@@ -118,21 +123,18 @@
     [self timer];
     [self showstartlabel];
     [audioPlayer play];
+    [self.datepicker setHidden:YES];
+    self.imageview.hidden = NO;
+    [self.datepicker setHidden:YES];
+    [self.btnA setHidden:NO];
+    self.countdownlabel.hidden = NO;
+    self.startlabel.hidden = NO;
+    self.startbuttonimage.hidden = YES;
+    self.creabuttonimage.hidden = NO;
+
     }
-    
 
 
-
-
-- (IBAction)creabutton:(UIBarButtonItem *)sender {
-    [timer invalidate];
-    hours = 0;
-    minuts = 0;
-    seconds = 0;
-    isZero = NO;
-    [self showtimerlabel];
-    
-}
 - (IBAction)Action {
     if (isAction) {
         [timer invalidate];
@@ -146,29 +148,6 @@
 - (IBAction)valuechangedpicker:(UIDatePicker *)sender {
     //datepickerの値が変化したら現在のpickerが示す値を取り出す
     [self valuecatched];
-}
-
-- (IBAction)okbutton:(UIBarButtonItem *)sender {
-    [self.datepicker setHidden:YES];
-    [self.btnA setHidden:NO];
-    [timer invalidate]; // タイマー動作中の可能性もあるので一旦タイマーを停止する
-    //タイマー動作中の可能性もあるので初期化
-    hours = 0;
-    minuts = 0;
-    seconds = 0;
-    isZero = NO;
-    //datepickerの値を取り出してラベルに表示
-    [self valuecatched];
-    minuts = minute;
-    hours = hour;
-    [self showtimerlabel];
-    //タイマー始める
-    [self timer];
-    [self showstartlabel];
-    [audioPlayer play];
-
-    
-
 }
 
 -(void)timer{
@@ -263,12 +242,12 @@
 
 -(void)showtimerlabel{
     //タイマーラベルを表示する
-    self.countdownlabel.text = [NSString stringWithFormat:@"%02ld:%02ld.%02ld",hours,minuts,seconds];
+    self.countdownlabel.text = [NSString stringWithFormat:@" %02ld:%02ld.%02ld",hours,minuts,seconds];
 }
 
 -(void)mainasushowtimerlabel{
     //マイナスのタイマーラベルを表示する
-    self.countdownlabel.text = [NSString stringWithFormat:@"- %02ld:%02ld.%02ld",hours,minuts,seconds];
+    self.countdownlabel.text = [NSString stringWithFormat:@"-%02ld:%02ld.%02ld",hours,minuts,seconds];
 }
 
 -(void)showstartlabel{
@@ -312,28 +291,48 @@
     
 }
 
+- (IBAction)startbutton:(UIButton *)sender {
+    [self.datepicker setHidden:YES];
+    [self.btnA setHidden:NO];
+    [timer invalidate]; // タイマー動作中の可能性もあるので一旦タイマーを停止する
+    //タイマー動作中の可能性もあるので初期化
+    hours = 0;
+    minuts = 0;
+    seconds = 0;
+    isZero = NO;
+    //datepickerの値を取り出してラベルに表示
+    [self valuecatched];
+    minuts = minute;
+    hours = hour;
+    [self showtimerlabel];
+    //タイマー始める
+    [self timer];
+    [self showstartlabel];
+    [audioPlayer play];
+    self.imageview.hidden = NO;
+    self.startlabel.hidden = NO;
+    self.countdownlabel.hidden = NO;
+    self.startbuttonimage.hidden = YES;
+    self.creabuttonimage.hidden = NO;
 
+}
 
+- (IBAction)creabutton:(UIButton *)sender {
+    [timer invalidate];
+    hours = 0;
+    minuts = 0;
+    seconds = 0;
+    isZero = NO;
+    [self showtimerlabel];
+    [self.datepicker setHidden:NO];
+    self.imageview.hidden = YES;
+    self.startlabel.hidden = YES;
+    self.countdownlabel.hidden = YES;
+    self.startbuttonimage.hidden = NO;
+    self.creabuttonimage.hidden = YES;
+    self.btnA.hidden = YES;
+    self.btnB.hidden = YES;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 @end
 
