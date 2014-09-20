@@ -39,6 +39,8 @@
     self.imageview.hidden = YES;
     self.startbuttonimage.hidden = NO;
     self.creabuttonimage.hidden = YES;
+       
+
     
     
     
@@ -131,8 +133,8 @@
     self.startlabel.hidden = NO;
     self.startbuttonimage.hidden = YES;
     self.creabuttonimage.hidden = NO;
-    
-}
+
+    }
 
 
 - (IBAction)Action {
@@ -314,7 +316,7 @@
     self.countdownlabel.hidden = NO;
     self.startbuttonimage.hidden = YES;
     self.creabuttonimage.hidden = NO;
-    
+
 }
 
 - (IBAction)creabutton:(UIButton *)sender {
@@ -332,7 +334,7 @@
     self.creabuttonimage.hidden = YES;
     self.btnA.hidden = YES;
     self.btnB.hidden = YES;
-    
+
 }
 @end
 
