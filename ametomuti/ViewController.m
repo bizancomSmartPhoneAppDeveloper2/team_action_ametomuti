@@ -126,15 +126,6 @@
 
 
 
-- (IBAction)creabutton:(UIBarButtonItem *)sender {
-    [timer invalidate];
-    hours = 0;
-    minuts = 0;
-    seconds = 0;
-    isZero = NO;
-    [self showtimerlabel];
-    
-}
 - (IBAction)Action {
     if (isAction) {
         [timer invalidate];
@@ -148,6 +139,17 @@
 - (IBAction)valuechangedpicker:(UIDatePicker *)sender {
     //datepickerの値が変化したら現在のpickerが示す値を取り出す
     [self valuecatched];
+}
+
+
+- (IBAction)creabutton:(UIBarButtonItem *)sender {
+    [timer invalidate];
+    hours = 0;
+    minuts = 0;
+    seconds = 0;
+    isZero = NO;
+    [self showtimerlabel];
+    
 }
 
 - (IBAction)okbutton:(UIBarButtonItem *)sender {
