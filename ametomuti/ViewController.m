@@ -9,7 +9,6 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
 @end
 
 @implementation ViewController{
@@ -19,50 +18,31 @@
     NSInteger seconds;
     NSInteger hour;
     NSInteger minute;
+    AVAudioPlayer *audioPlayer;
     BOOL isZero;//00:00:00を通過したかどうか、マイナスカウントを行うために必要
     BOOL isAction;//タイマーが動作中かどうか
-    AVAudioPlayer *audioPlayer;
-    
-    
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    hours = 0;
-    minuts = 0;
-    seconds = 0;
-    isZero = 0;
-    isAction = 0;
+    [self initialaiza];
     [self showdatepickerview];//ピッカータイマーを表示しておく
-    self.imageview.hidden = YES;
-    self.startbuttonimage.hidden = NO;
-    self.creabuttonimage.hidden = YES;
-       
-
-    
-    
-    
+    [self defaultView];
+   
     //タイマースタートと同時に効果音鳴らす
     NSError *error = nil;
-    // 再生する audio ファイルのパスを取得
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"piiii" ofType:@"MP3"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"piiii" ofType:@"MP3"];// 再生する audio ファイルのパスを取得
     // パスから、再生するURLを作成する
     NSURL *url = [[NSURL alloc] initFileURLWithPath:path];
-    // auido を再生するプレイヤーを作成する
-    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];// auido を再生するプレイヤーを作成する
     // エラーが起きたとき
     if ( error != nil )
     {
         NSLog(@"Error %@", [error localizedDescription]);
     }
-    // 自分自身をデリゲートに設定
-    [audioPlayer setDelegate:self];
-    
-    
-    
-    
+    [audioPlayer setDelegate:self];// 自分自身をデリゲートに設定
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,9 +53,8 @@
 
 - (IBAction)button1:(UIButton *)sender {
     [timer invalidate];
-    hours = 0;
-    minuts = 0;
-    seconds = 0;
+    [self initialaiza];
+    
     switch (sender.tag) {
         case 0:
             minuts = 3;
@@ -98,7 +77,7 @@
             break;
         case 6:
             hours = 1;
-            minuts = 01;
+            minuts = 30;
             break;
         case 7:
             hours = 2;
@@ -125,17 +104,8 @@
     [self timer];
     [self showstartlabel];
     [audioPlayer play];
-    [self.datepicker setHidden:YES];
-    self.imageview.hidden = NO;
-    [self.datepicker setHidden:YES];
-    [self.btnA setHidden:NO];
-    self.countdownlabel.hidden = NO;
-    self.startlabel.hidden = NO;
-    self.startbuttonimage.hidden = YES;
-    self.creabuttonimage.hidden = NO;
-
-    }
-
+    [self isActionView];
+}
 
 - (IBAction)Action {
     if (isAction) {
@@ -150,6 +120,38 @@
 - (IBAction)valuechangedpicker:(UIDatePicker *)sender {
     //datepickerの値が変化したら現在のpickerが示す値を取り出す
     [self valuecatched];
+}
+
+- (IBAction)btnA:(UIButton*)sender
+{
+    [self PreiseVoice];
+}
+- (IBAction)btnB:(UIButton*)sender
+{
+    [self ScoldVoice];
+}
+
+- (IBAction)startbutton:(UIButton *)sender {
+    [timer invalidate]; // タイマー動作中の可能性もあるので一旦タイマーを停止する
+    //タイマー動作中の可能性もあるので初期化
+    [self initialaiza];
+    //datepickerの値を取り出してラベルに表示
+    [self valuecatched];
+    minuts = minute;
+    hours = hour;
+    [self showtimerlabel];
+    //タイマー始める
+    [self timer];
+    [self showstartlabel];
+    [audioPlayer play];
+    [self isActionView];
+
+}
+
+- (IBAction)creabutton:(UIButton *)sender {
+    [timer invalidate];
+    [self initialaiza];
+    [self defaultView];
 }
 
 -(void)timer{
@@ -254,10 +256,7 @@
 
 -(void)showstartlabel{
     self.startlabel.text = @"ミッションスタート";
-    
 }
-
-
 
 -(void)PreiseVoice//賞賛音声の入れ物です。
 {
@@ -267,7 +266,6 @@
     UInt32 soundID;
     AudioServicesCreateSystemSoundID(soundfileURLRef, &soundID);
     AudioServicesPlaySystemSound(soundID);
-    
 }
 
 -(void)ScoldVoice//叱責音声の入れ物です。
@@ -278,63 +276,36 @@
     UInt32 soundID;
     AudioServicesCreateSystemSoundID(soundfileURLRef, &soundID);
     AudioServicesPlaySystemSound(soundID);
-    
 }
 
-
-- (IBAction)btnA:(UIButton*)sender
-{
-    [self PreiseVoice];
-    
-}
-- (IBAction)btnB:(UIButton*)sender
-{
-    [self ScoldVoice];
-    
-}
-
-- (IBAction)startbutton:(UIButton *)sender {
-    [self.datepicker setHidden:YES];
-    [self.btnA setHidden:NO];
-    [timer invalidate]; // タイマー動作中の可能性もあるので一旦タイマーを停止する
-    //タイマー動作中の可能性もあるので初期化
-    hours = 0;
-    minuts = 0;
-    seconds = 0;
-    isZero = NO;
-    //datepickerの値を取り出してラベルに表示
-    [self valuecatched];
-    minuts = minute;
-    hours = hour;
-    [self showtimerlabel];
-    //タイマー始める
-    [self timer];
-    [self showstartlabel];
-    [audioPlayer play];
+-(void)isActionView{
+    self.datepicker.hidden = YES;
+    self.btnA.hidden = NO;
     self.imageview.hidden = NO;
     self.startlabel.hidden = NO;
     self.countdownlabel.hidden = NO;
     self.startbuttonimage.hidden = YES;
     self.creabuttonimage.hidden = NO;
-
 }
 
-- (IBAction)creabutton:(UIButton *)sender {
-    [timer invalidate];
-    hours = 0;
-    minuts = 0;
-    seconds = 0;
-    isZero = NO;
-    [self showtimerlabel];
-    [self.datepicker setHidden:NO];
-    self.imageview.hidden = YES;
-    self.startlabel.hidden = YES;
+-(void)defaultView{
+    self.datepicker.hidden = NO;
     self.countdownlabel.hidden = YES;
+    self.imageview.hidden = YES;
     self.startbuttonimage.hidden = NO;
     self.creabuttonimage.hidden = YES;
     self.btnA.hidden = YES;
     self.btnB.hidden = YES;
-
+    self.startlabel.hidden = YES;
 }
+
+- (void)initialaiza{
+    hours = 0;
+    minuts = 0;
+    seconds = 0;
+    isZero = 0;
+    isAction = 0;
+}
+
 @end
 
