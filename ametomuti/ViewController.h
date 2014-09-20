@@ -12,7 +12,6 @@
 
 
 @interface ViewController : UIViewController<AVAudioPlayerDelegate>
-
 - (IBAction)button1:(UIButton *)sender;
 - (IBAction)creabutton:(UIBarButtonItem *)sender;
 @property (weak, nonatomic) IBOutlet UILabel *countdownlabel;
@@ -22,9 +21,6 @@
 - (IBAction)okbutton:(UIBarButtonItem *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *btnA;
 @property (weak, nonatomic) IBOutlet UIButton *btnB;
-@property(nonatomic, getter = isHidden)BOOL hidden;
-
-
 @end
 
 
