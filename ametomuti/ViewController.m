@@ -22,7 +22,7 @@
     BOOL isZero;//00:00:00を通過したかどうか、マイナスカウントを行うために必要
     BOOL isAction;
     AVAudioPlayer *audioPlayer;
-    SystemSoundID goodJob;//効果音
+    
     
 }
 
@@ -37,6 +37,7 @@
     isZero = 0;
     isAction = YES;
     [self showdatepickerview];//ピッカータイマーを表示しておく
+    
     
     //タイマースタートと同時に効果音鳴らす
     NSError *error = nil;
@@ -54,10 +55,7 @@
     // 自分自身をデリゲートに設定
     [audioPlayer setDelegate:self];
     
-}
-
-{
-    NSString *SoundPath = [[NSBundle mainBundle] pathForReaource:goodJobs]
+   
 
 
 }
@@ -275,7 +273,67 @@
 
 -(void)showstartlabel{
     self.startlabel.text = @"ミッションスタート";
+    
 }
+
+
+
+-(void)PreiseVoice//賞賛音声の入れ物です。
+{
+    CFBundleRef maingundle = CFBundleGetMainBundle();
+    CFURLRef soundfileURLRef;
+    soundfileURLRef = CFBundleCopyResourceURL(maingundle, (CFStringRef)@"GoodJobMen",CFSTR("mp3"),NULL);
+    UInt32 soundID;
+    AudioServicesCreateSystemSoundID(soundfileURLRef, &soundID);
+    AudioServicesPlaySystemSound(soundID);
+    
+}
+
+-(void)ScoldVoice//叱責音声の入れ物です。
+{
+    CFBundleRef maingundle = CFBundleGetMainBundle();
+    CFURLRef soundfileURLRef;
+    soundfileURLRef = CFBundleCopyResourceURL(maingundle, (CFStringRef)@"YouNeedMoreEffort",CFSTR("mp3"),NULL);
+    UInt32 soundID;
+    AudioServicesCreateSystemSoundID(soundfileURLRef, &soundID);
+    AudioServicesPlaySystemSound(soundID);
+    
+}
+
+
+- (IBAction)btnA:(UIButton*)sender
+{
+    [self PreiseVoice];
+    
+}
+- (IBAction)btnB:(UIButton*)sender
+{
+    [self ScoldVoice];
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end
 

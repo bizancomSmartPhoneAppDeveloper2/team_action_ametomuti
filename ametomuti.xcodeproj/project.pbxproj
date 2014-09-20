@@ -27,6 +27,8 @@
 		07C802FB19C2DFB4001A91BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07C802F919C2DFB4001A91BB /* InfoPlist.strings */; };
 		07C802FD19C2DFB4001A91BB /* ametomutiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C802FC19C2DFB4001A91BB /* ametomutiTests.m */; };
 		7BDF4A2E19CC760200DAD01E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0732522019CBF29200B9A1D7 /* AudioToolbox.framework */; };
+		7BDF4A3B19CD27E200DAD01E /* GoodJobMen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7BDF4A3A19CD27E200DAD01E /* GoodJobMen.mp3 */; };
+		7BDF4A8519CD4BF400DAD01E /* YouNeedMoreEffort.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7BDF4A8419CD4BF400DAD01E /* YouNeedMoreEffort.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,9 +67,8 @@
 		07C802F819C2DFB4001A91BB /* ametomutiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ametomutiTests-Info.plist"; sourceTree = "<group>"; };
 		07C802FA19C2DFB4001A91BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07C802FC19C2DFB4001A91BB /* ametomutiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ametomutiTests.m; sourceTree = "<group>"; };
-		7BDF4A3019CC77FD00DAD01E /* youNeedMoreEffort.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = youNeedMoreEffort.m4a; sourceTree = "<group>"; };
-		7BDF4A3119CC77FD00DAD01E /* neverMind.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = neverMind.m4a; sourceTree = "<group>"; };
-		7BDF4A3219CC77FD00DAD01E /* goodJobMen.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = goodJobMen.m4a; sourceTree = "<group>"; };
+		7BDF4A3A19CD27E200DAD01E /* GoodJobMen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GoodJobMen.mp3; sourceTree = "<group>"; };
+		7BDF4A8419CD4BF400DAD01E /* YouNeedMoreEffort.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = YouNeedMoreEffort.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,9 +180,8 @@
 		7BDF4A2F19CC763400DAD01E /* SoundEffects */ = {
 			isa = PBXGroup;
 			children = (
-				7BDF4A3019CC77FD00DAD01E /* youNeedMoreEffort.m4a */,
-				7BDF4A3119CC77FD00DAD01E /* neverMind.m4a */,
-				7BDF4A3219CC77FD00DAD01E /* goodJobMen.m4a */,
+				7BDF4A8419CD4BF400DAD01E /* YouNeedMoreEffort.mp3 */,
+				7BDF4A3A19CD27E200DAD01E /* GoodJobMen.mp3 */,
 			);
 			name = SoundEffects;
 			sourceTree = "<group>";
@@ -264,7 +264,9 @@
 			files = (
 				07C802EA19C2DFB4001A91BB /* Images.xcassets in Resources */,
 				07C802DC19C2DFB3001A91BB /* InfoPlist.strings in Resources */,
+				7BDF4A3B19CD27E200DAD01E /* GoodJobMen.mp3 in Resources */,
 				07C802E519C2DFB4001A91BB /* Main.storyboard in Resources */,
+				7BDF4A8519CD4BF400DAD01E /* YouNeedMoreEffort.mp3 in Resources */,
 				0732521919CBD5D200B9A1D7 /* lgi01a201408301100.jpg in Resources */,
 				0732521F19CBEEBB00B9A1D7 /* piiii.MP3 in Resources */,
 				0732521B19CBD7F000B9A1D7 /* lgi01a201405090500.jpg in Resources */,
