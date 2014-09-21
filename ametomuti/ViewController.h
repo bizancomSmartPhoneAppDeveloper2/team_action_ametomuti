@@ -14,6 +14,7 @@
 @interface ViewController : UIViewController<AVAudioPlayerDelegate>
 - (IBAction)button1:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UILabel *countdownlabel;
+@property (weak, nonatomic) IBOutlet UILabel *animationlabel;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datepicker;
 @property (weak, nonatomic) IBOutlet UILabel *startlabel;
 - (IBAction)valuechangedpicker:(UIDatePicker *)sender;
