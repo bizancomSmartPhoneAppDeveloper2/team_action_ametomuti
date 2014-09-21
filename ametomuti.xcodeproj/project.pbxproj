@@ -32,6 +32,7 @@
 		7B09C8E819CDA78F00D1BD15 /* office.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B09C8E719CDA78F00D1BD15 /* office.png */; };
 		7B09C8EA19CDAAB300D1BD15 /* office03.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B09C8E919CDAAB300D1BD15 /* office03.png */; };
 		7B09C8EE19CDB11500D1BD15 /* backColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B09C8ED19CDB11500D1BD15 /* backColor.png */; };
+		7B1BCC1A19CEC3490031AA03 /* goodJob.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B1BCC1919CEC3490031AA03 /* goodJob.png */; };
 		7BDF4A2E19CC760200DAD01E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0732522019CBF29200B9A1D7 /* AudioToolbox.framework */; };
 		7BDF4A3B19CD27E200DAD01E /* GoodJobMen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7BDF4A3A19CD27E200DAD01E /* GoodJobMen.mp3 */; };
 		7BDF4A8519CD4BF400DAD01E /* YouNeedMoreEffort.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7BDF4A8419CD4BF400DAD01E /* YouNeedMoreEffort.mp3 */; };
@@ -79,6 +80,7 @@
 		7B09C8E719CDA78F00D1BD15 /* office.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = office.png; sourceTree = "<group>"; };
 		7B09C8E919CDAAB300D1BD15 /* office03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = office03.png; sourceTree = "<group>"; };
 		7B09C8ED19CDB11500D1BD15 /* backColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backColor.png; sourceTree = "<group>"; };
+		7B1BCC1919CEC3490031AA03 /* goodJob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goodJob.png; sourceTree = "<group>"; };
 		7BDF4A3A19CD27E200DAD01E /* GoodJobMen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GoodJobMen.mp3; sourceTree = "<group>"; };
 		7BDF4A8419CD4BF400DAD01E /* YouNeedMoreEffort.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = YouNeedMoreEffort.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				07E2802E19CEA81700695CB7 /* pipipipiii.MP3 */,
+				7B1BCC1919CEC3490031AA03 /* goodJob.png */,
 				7B09C8E919CDAAB300D1BD15 /* office03.png */,
 				7B09C8E719CDA78F00D1BD15 /* office.png */,
 				7B09C8ED19CDB11500D1BD15 /* backColor.png */,
@@ -282,6 +285,7 @@
 			files = (
 				07C802EA19C2DFB4001A91BB /* Images.xcassets in Resources */,
 				07C802DC19C2DFB3001A91BB /* InfoPlist.strings in Resources */,
+				7B1BCC1A19CEC3490031AA03 /* goodJob.png in Resources */,
 				7B09C8EE19CDB11500D1BD15 /* backColor.png in Resources */,
 				7BDF4A3B19CD27E200DAD01E /* GoodJobMen.mp3 in Resources */,
 				07C802E519C2DFB4001A91BB /* Main.storyboard in Resources */,
