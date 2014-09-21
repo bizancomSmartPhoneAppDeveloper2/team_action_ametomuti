@@ -49,7 +49,7 @@
     
     //カウントダウン３秒前に鳴ったら効果音で知らせる
     NSError *error1 = nil;
-    NSString *path1 = [[NSBundle mainBundle] pathForResource:@"pipipipiii" ofType:@"MP3"];// 再生する audio ファイルのパスを取得
+    NSString *path1 = [[NSBundle mainBundle] pathForResource:@"Action" ofType:@"mp3"];// 再生する audio ファイルのパスを取得
     // パスから、再生するURLを作成する
     NSURL *url1 = [[NSURL alloc] initFileURLWithPath:path1];
     zero_audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url1 error:&error];// auido を再生するプレイヤーを作成する
