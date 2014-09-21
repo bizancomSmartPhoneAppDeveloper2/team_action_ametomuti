@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *countdownlabel;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datepicker;
 @property (weak, nonatomic) IBOutlet UILabel *startlabel;
+@property (weak, nonatomic) IBOutlet UILabel *animationlabel;
 - (IBAction)valuechangedpicker:(UIDatePicker *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *btnA;
 @property (weak, nonatomic) IBOutlet UIButton *btnB;
