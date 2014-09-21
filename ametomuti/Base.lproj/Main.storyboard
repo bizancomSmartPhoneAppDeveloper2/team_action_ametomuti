@@ -338,8 +338,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person2.png" translatesAutoresizingMaskIntoConstraints="NO" id="gJy-cN-NAC">
-                                <rect key="frame" x="8" y="30" width="312" height="430"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gJy-cN-NAC">
+                                <rect key="frame" x="0.0" y="30" width="320" height="430"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="will be alright" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfI-np-ST5">
@@ -362,7 +362,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="ButtomGY.png" width="1040" height="1000"/>
         <image name="OKbuttom02.png" width="426" height="417"/>
         <image name="goodJob.png" width="563" height="700"/>
-        <image name="person2.png" width="362" height="584"/>
         <image name="shin.png" width="560" height="570"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
