@@ -23,6 +23,7 @@
     AVAudioPlayer *zero_audioPlayer;
     BOOL isZero;//00:00:00を通過したかどうか、マイナスカウントを行うために必要
     BOOL isAction;//タイマーが動作中かどうか
+    BOOL isMainasuThree;
 }
 
 - (void)viewDidLoad
@@ -145,6 +146,9 @@
 }
 - (IBAction)btnB:(UIButton*)sender
 {
+    if (isMainasuThree) {
+        [self ScaredScoldVoice];
+    }else
     [self ScoldVoice];
 }
 
@@ -246,6 +250,9 @@
             seconds++;
         }
     }
+    if (isZero == YES && hours == 0 && minuts == 0 && seconds == 3) {
+        isMainasuThree = YES;
+    }
 }
 
 -(void)showdatepickerview{
@@ -303,6 +310,17 @@
     AudioServicesPlaySystemSound(soundID);
 }
 
+-(void)ScaredScoldVoice//叱責音声の入れ物です。
+{
+    CFBundleRef maingundle = CFBundleGetMainBundle();
+    CFURLRef soundfileURLRef;
+    soundfileURLRef = CFBundleCopyResourceURL(maingundle, (CFStringRef)@"YouNeedMoreEffort",CFSTR("mp3"),NULL);
+    UInt32 soundID;
+    AudioServicesCreateSystemSoundID(soundfileURLRef, &soundID);
+    AudioServicesPlaySystemSound(soundID);
+}
+
+//タイマー使用中に見せたい画面構成を準備
 -(void)isActionView{
     self.datepicker.hidden = YES;
     self.btnA.hidden = NO;
@@ -314,6 +332,7 @@
     self.animationlabel.hidden = NO;
 }
 
+//デフォルトで見せたい画面構成を準備
 -(void)defaultView{
     self.datepicker.hidden = NO;
     self.countdownlabel.hidden = YES;

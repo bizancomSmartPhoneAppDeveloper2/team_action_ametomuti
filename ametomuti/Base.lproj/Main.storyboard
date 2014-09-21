@@ -128,7 +128,7 @@
                                 <rect key="frame" x="245" y="75" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="5h" backgroundImage="web-hosting.png">
+                                <state key="normal" title="5h" backgroundImage="shin.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -347,7 +347,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="lgi01a201405090500.jpg" width="1024" height="1024"/>
         <image name="lgi01a201408301100.jpg" width="1024" height="985"/>
         <image name="shin.png" width="560" height="570"/>
-        <image name="web-hosting.png" width="128" height="128"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
