@@ -297,7 +297,7 @@
 {
     CFBundleRef maingundle = CFBundleGetMainBundle();
     CFURLRef soundfileURLRef;
-    soundfileURLRef = CFBundleCopyResourceURL(maingundle, (CFStringRef)@"YouNeedMoreEffort",CFSTR("mp3"),NULL);
+    soundfileURLRef = CFBundleCopyResourceURL(maingundle, (CFStringRef)@"WillBeOK",CFSTR("mp3"),NULL);
     UInt32 soundID;
     AudioServicesCreateSystemSoundID(soundfileURLRef, &soundID);
     AudioServicesPlaySystemSound(soundID);
