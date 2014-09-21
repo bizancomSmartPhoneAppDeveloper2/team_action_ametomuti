@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0714D9BC19CED405005272C5 /* piiii.MP3 in Resources */ = {isa = PBXBuildFile; fileRef = 0714D9BB19CED405005272C5 /* piiii.MP3 */; };
+		0714D9BE19CED40E005272C5 /* pipipipiii.MP3 in Resources */ = {isa = PBXBuildFile; fileRef = 0714D9BD19CED40E005272C5 /* pipipipiii.MP3 */; };
 		07E68E3519CEC24000D1542C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E68E3419CEC24000D1542C /* Foundation.framework */; };
 		07E68E3719CEC24000D1542C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E68E3619CEC24000D1542C /* CoreGraphics.framework */; };
 		07E68E3919CEC24000D1542C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E68E3819CEC24000D1542C /* UIKit.framework */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0714D9BB19CED405005272C5 /* piiii.MP3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piiii.MP3; sourceTree = "<group>"; };
+		0714D9BD19CED40E005272C5 /* pipipipiii.MP3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pipipipiii.MP3; sourceTree = "<group>"; };
 		07E68E3119CEC24000D1542C /* ametomutito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ametomutito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E68E3419CEC24000D1542C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		07E68E3619CEC24000D1542C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -126,6 +130,8 @@
 		07E68E3B19CEC24000D1542C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0714D9BD19CED40E005272C5 /* pipipipiii.MP3 */,
+				0714D9BB19CED405005272C5 /* piiii.MP3 */,
 				07E68E3C19CEC24000D1542C /* ametomutito-Info.plist */,
 				07E68E3D19CEC24000D1542C /* InfoPlist.strings */,
 				07E68E4019CEC24000D1542C /* main.m */,
@@ -231,6 +237,8 @@
 				07E68E4D19CEC24000D1542C /* Images.xcassets in Resources */,
 				07E68E3F19CEC24000D1542C /* InfoPlist.strings in Resources */,
 				07E68E4819CEC24000D1542C /* Main.storyboard in Resources */,
+				0714D9BC19CED405005272C5 /* piiii.MP3 in Resources */,
+				0714D9BE19CED40E005272C5 /* pipipipiii.MP3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +464,7 @@
 				07E68E6519CEC24000D1542C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07E68E6619CEC24000D1542C /* Build configuration list for PBXNativeTarget "ametomutitoTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +473,7 @@
 				07E68E6819CEC24000D1542C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

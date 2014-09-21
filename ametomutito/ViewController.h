@@ -7,7 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface ViewController : UIViewController
 
+@interface ViewController : UIViewController<AVAudioPlayerDelegate>
+- (IBAction)button1:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UILabel *countdownlabel;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datepicker;
+@property (weak, nonatomic) IBOutlet UILabel *startlabel;
+@property (weak, nonatomic) IBOutlet UILabel *animationlabel;
+- (IBAction)valuechangedpicker:(UIDatePicker *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *btnA;
+@property (weak, nonatomic) IBOutlet UIButton *btnB;
+@property (weak, nonatomic) IBOutlet UIImageView *imageview;
+- (IBAction)startbutton:(UIButton *)sender;
+- (IBAction)creabutton:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *creabuttonimage;
+@property (weak, nonatomic) IBOutlet UIButton *startbuttonimage;
 @end
