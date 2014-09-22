@@ -276,12 +276,12 @@
     components = [calender components:flags fromDate:self.datepicker.date];
     hour = components.hour;
     minute = components.minute;
-    NSLog(@"%d時間 %d分", hour, minute);
+    NSLog(@"%ld時間 %ld分", hour, minute);
 }
 
 -(void)showtimerlabel{
     //タイマーラベルを表示する
-    self.countdownlabel.text = [NSString stringWithFormat:@" %02d %02d %02d",hours,minuts,seconds];
+    self.countdownlabel.text = [NSString stringWithFormat:@" %02ld %02ld %02ld",hours,minuts,seconds];
 }
 
 -(void)mainasushowtimerlabel{
@@ -291,7 +291,7 @@
     self.startlabel.textColor = [UIColor redColor];
     self.startlabel.text = @"ミッションピンチ！！";
     //マイナスのタイマーラベルを表示する
-    self.countdownlabel.text = [NSString stringWithFormat:@"-%02d %02d %02d",hours,minuts,seconds];
+    self.countdownlabel.text = [NSString stringWithFormat:@"-%02ld %02ld %02ld",hours,minuts,seconds];
 }
 
 -(void)showstartlabel{

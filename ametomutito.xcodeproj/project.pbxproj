@@ -28,6 +28,9 @@
 		07F3FA5C19D05EDC0070983F /* ButtomGY.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F3FA5B19D05EDC0070983F /* ButtomGY.png */; };
 		07F3FA5E19D05EE50070983F /* goodJob.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F3FA5D19D05EE50070983F /* goodJob.png */; };
 		07F3FA6019D05EF00070983F /* Scold.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F3FA5F19D05EF00070983F /* Scold.png */; };
+		7D7776F119D0A81000656CDB /* GoodJobMen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7D7776EE19D0A81000656CDB /* GoodJobMen.mp3 */; };
+		7D7776F219D0A81000656CDB /* WillBeOK.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7D7776EF19D0A81000656CDB /* WillBeOK.mp3 */; };
+		7D7776F319D0A81000656CDB /* YouNeedMoreEffort.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7D7776F019D0A81000656CDB /* YouNeedMoreEffort.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		07F3FA5B19D05EDC0070983F /* ButtomGY.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtomGY.png; sourceTree = "<group>"; };
 		07F3FA5D19D05EE50070983F /* goodJob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goodJob.png; sourceTree = "<group>"; };
 		07F3FA5F19D05EF00070983F /* Scold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Scold.png; sourceTree = "<group>"; };
+		7D7776EE19D0A81000656CDB /* GoodJobMen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GoodJobMen.mp3; sourceTree = "<group>"; };
+		7D7776EF19D0A81000656CDB /* WillBeOK.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WillBeOK.mp3; sourceTree = "<group>"; };
+		7D7776F019D0A81000656CDB /* YouNeedMoreEffort.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = YouNeedMoreEffort.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,7 @@
 				07E68E4919CEC24000D1542C /* ViewController.h */,
 				07E68E4A19CEC24000D1542C /* ViewController.m */,
 				07E68E4C19CEC24000D1542C /* Images.xcassets */,
+				7D7776ED19D0A73200656CDB /* SoundEffects */,
 				07E68E3B19CEC24000D1542C /* Supporting Files */,
 			);
 			path = ametomutito;
@@ -171,6 +178,16 @@
 				07E68E5C19CEC24000D1542C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7D7776ED19D0A73200656CDB /* SoundEffects */ = {
+			isa = PBXGroup;
+			children = (
+				7D7776EE19D0A81000656CDB /* GoodJobMen.mp3 */,
+				7D7776EF19D0A81000656CDB /* WillBeOK.mp3 */,
+				7D7776F019D0A81000656CDB /* YouNeedMoreEffort.mp3 */,
+			);
+			name = SoundEffects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,13 +269,16 @@
 				07F3FA5819D05EC90070983F /* OKbuttom02.png in Resources */,
 				07E68E4D19CEC24000D1542C /* Images.xcassets in Resources */,
 				07F3FA5E19D05EE50070983F /* goodJob.png in Resources */,
+				7D7776F319D0A81000656CDB /* YouNeedMoreEffort.mp3 in Resources */,
 				07F3FA5C19D05EDC0070983F /* ButtomGY.png in Resources */,
 				07E68E3F19CEC24000D1542C /* InfoPlist.strings in Resources */,
 				07E68E4819CEC24000D1542C /* Main.storyboard in Resources */,
+				7D7776F119D0A81000656CDB /* GoodJobMen.mp3 in Resources */,
 				0714D9BC19CED405005272C5 /* piiii.MP3 in Resources */,
 				07F3FA6019D05EF00070983F /* Scold.png in Resources */,
 				07F3FA5A19D05ED20070983F /* shin.png in Resources */,
 				0714D9BE19CED40E005272C5 /* pipipipiii.MP3 in Resources */,
+				7D7776F219D0A81000656CDB /* WillBeOK.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
