@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *animationlabel;
 - (IBAction)valuechangedpicker:(UIDatePicker *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *btnA;
+- (IBAction)btnB:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *btnB;
 @property (weak, nonatomic) IBOutlet UIImageView *imageview;
 - (IBAction)startbutton:(UIButton *)sender;

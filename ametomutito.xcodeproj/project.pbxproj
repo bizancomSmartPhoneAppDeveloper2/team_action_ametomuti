@@ -23,6 +23,11 @@
 		07E68E5619CEC24000D1542C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E68E3819CEC24000D1542C /* UIKit.framework */; };
 		07E68E5E19CEC24000D1542C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07E68E5C19CEC24000D1542C /* InfoPlist.strings */; };
 		07E68E6019CEC24000D1542C /* ametomutitoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E68E5F19CEC24000D1542C /* ametomutitoTests.m */; };
+		07F3FA5819D05EC90070983F /* OKbuttom02.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F3FA5719D05EC90070983F /* OKbuttom02.png */; };
+		07F3FA5A19D05ED20070983F /* shin.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F3FA5919D05ED20070983F /* shin.png */; };
+		07F3FA5C19D05EDC0070983F /* ButtomGY.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F3FA5B19D05EDC0070983F /* ButtomGY.png */; };
+		07F3FA5E19D05EE50070983F /* goodJob.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F3FA5D19D05EE50070983F /* goodJob.png */; };
+		07F3FA6019D05EF00070983F /* Scold.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F3FA5F19D05EF00070983F /* Scold.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,11 @@
 		07E68E5B19CEC24000D1542C /* ametomutitoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ametomutitoTests-Info.plist"; sourceTree = "<group>"; };
 		07E68E5D19CEC24000D1542C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07E68E5F19CEC24000D1542C /* ametomutitoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ametomutitoTests.m; sourceTree = "<group>"; };
+		07F3FA5719D05EC90070983F /* OKbuttom02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OKbuttom02.png; sourceTree = "<group>"; };
+		07F3FA5919D05ED20070983F /* shin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shin.png; sourceTree = "<group>"; };
+		07F3FA5B19D05EDC0070983F /* ButtomGY.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtomGY.png; sourceTree = "<group>"; };
+		07F3FA5D19D05EE50070983F /* goodJob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goodJob.png; sourceTree = "<group>"; };
+		07F3FA5F19D05EF00070983F /* Scold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Scold.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +140,11 @@
 		07E68E3B19CEC24000D1542C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				07F3FA5F19D05EF00070983F /* Scold.png */,
+				07F3FA5D19D05EE50070983F /* goodJob.png */,
+				07F3FA5B19D05EDC0070983F /* ButtomGY.png */,
+				07F3FA5919D05ED20070983F /* shin.png */,
+				07F3FA5719D05EC90070983F /* OKbuttom02.png */,
 				0714D9BD19CED40E005272C5 /* pipipipiii.MP3 */,
 				0714D9BB19CED405005272C5 /* piiii.MP3 */,
 				07E68E3C19CEC24000D1542C /* ametomutito-Info.plist */,
@@ -234,10 +249,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07F3FA5819D05EC90070983F /* OKbuttom02.png in Resources */,
 				07E68E4D19CEC24000D1542C /* Images.xcassets in Resources */,
+				07F3FA5E19D05EE50070983F /* goodJob.png in Resources */,
+				07F3FA5C19D05EDC0070983F /* ButtomGY.png in Resources */,
 				07E68E3F19CEC24000D1542C /* InfoPlist.strings in Resources */,
 				07E68E4819CEC24000D1542C /* Main.storyboard in Resources */,
 				0714D9BC19CED405005272C5 /* piiii.MP3 in Resources */,
+				07F3FA6019D05EF00070983F /* Scold.png in Resources */,
+				07F3FA5A19D05ED20070983F /* shin.png in Resources */,
 				0714D9BE19CED40E005272C5 /* pipipipiii.MP3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

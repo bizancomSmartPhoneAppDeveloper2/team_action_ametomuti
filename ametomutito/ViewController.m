@@ -141,10 +141,17 @@
 
 - (IBAction)btnA:(UIButton*)sender
 {
+    [timer invalidate];
+    [self initialaiza];
+    [self defaultView];
     [self PreiseVoice];
 }
+
 - (IBAction)btnB:(UIButton*)sender
 {
+    [timer invalidate];
+    [self initialaiza];
+    [self defaultView];
     if (isMainasuThree) {
         [self ScaredScoldVoice];
     }else
@@ -269,20 +276,22 @@
     components = [calender components:flags fromDate:self.datepicker.date];
     hour = components.hour;
     minute = components.minute;
-    NSLog(@"%ld時間 %ld分", hour, minute);
+    NSLog(@"%d時間 %d分", hour, minute);
 }
 
 -(void)showtimerlabel{
     //タイマーラベルを表示する
-    self.countdownlabel.text = [NSString stringWithFormat:@" %02ld %02ld %02ld",hours,minuts,seconds];
+    self.countdownlabel.text = [NSString stringWithFormat:@" %02d %02d %02d",hours,minuts,seconds];
 }
 
 -(void)mainasushowtimerlabel{
     //マイナスカウントの時はラベルの文字を赤色にする
     self.countdownlabel.textColor = [UIColor redColor];
     self.animationlabel.textColor = [UIColor redColor];
+    self.startlabel.textColor = [UIColor redColor];
+    self.startlabel.text = @"ミッションピンチ！！";
     //マイナスのタイマーラベルを表示する
-    self.countdownlabel.text = [NSString stringWithFormat:@"-%02ld %02ld %02ld",hours,minuts,seconds];
+    self.countdownlabel.text = [NSString stringWithFormat:@"-%02d %02d %02d",hours,minuts,seconds];
 }
 
 -(void)showstartlabel{
@@ -372,4 +381,5 @@
 -(IBAction)gobackhome:(UIStoryboardSegue *)segue{
     
 }
+
 @end
