@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Mwk-rw-4al">
-                                <rect key="frame" x="0.0" y="290" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="290" width="320" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="432983250.280114">
                                     <!--2014-09-21 09:07:30 +0000-->
                                 </date>
