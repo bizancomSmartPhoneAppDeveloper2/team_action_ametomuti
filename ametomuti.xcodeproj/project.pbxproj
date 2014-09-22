@@ -31,6 +31,7 @@
 		7B09C8EA19CDAAB300D1BD15 /* office03.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B09C8E919CDAAB300D1BD15 /* office03.png */; };
 		7B09C8EE19CDB11500D1BD15 /* backColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B09C8ED19CDB11500D1BD15 /* backColor.png */; };
 		7B1BCC1A19CEC3490031AA03 /* goodJob.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B1BCC1919CEC3490031AA03 /* goodJob.png */; };
+		7B9E4FDA19D071170006A1AE /* WillBeOK.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B9E4FD919D071170006A1AE /* WillBeOK.mp3 */; };
 		7BA8E67719CED1E40046084B /* circleofWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BA8E67619CED1E40046084B /* circleofWhite.png */; };
 		7BA8E67919CED2BD0046084B /* OKbuttom02.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BA8E67819CED2BD0046084B /* OKbuttom02.png */; };
 		7BA8E67B19CED7AA0046084B /* Action.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7BA8E67A19CED7AA0046084B /* Action.mp3 */; };
@@ -80,6 +81,7 @@
 		7B09C8E919CDAAB300D1BD15 /* office03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = office03.png; sourceTree = "<group>"; };
 		7B09C8ED19CDB11500D1BD15 /* backColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backColor.png; sourceTree = "<group>"; };
 		7B1BCC1919CEC3490031AA03 /* goodJob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goodJob.png; sourceTree = "<group>"; };
+		7B9E4FD919D071170006A1AE /* WillBeOK.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WillBeOK.mp3; sourceTree = "<group>"; };
 		7BA8E67619CED1E40046084B /* circleofWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circleofWhite.png; sourceTree = "<group>"; };
 		7BA8E67819CED2BD0046084B /* OKbuttom02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OKbuttom02.png; sourceTree = "<group>"; };
 		7BA8E67A19CED7AA0046084B /* Action.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Action.mp3; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			children = (
 				7BDF4A8419CD4BF400DAD01E /* YouNeedMoreEffort.mp3 */,
 				7BA8E67A19CED7AA0046084B /* Action.mp3 */,
+				7B9E4FD919D071170006A1AE /* WillBeOK.mp3 */,
 				7BDF4A3A19CD27E200DAD01E /* GoodJobMen.mp3 */,
 			);
 			name = SoundEffects;
@@ -303,6 +306,7 @@
 				0732521F19CBEEBB00B9A1D7 /* piiii.MP3 in Resources */,
 				0732521B19CBD7F000B9A1D7 /* lgi01a201405090500.jpg in Resources */,
 				0732521D19CBE4BA00B9A1D7 /* web-hosting.png in Resources */,
+				7B9E4FDA19D071170006A1AE /* WillBeOK.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
