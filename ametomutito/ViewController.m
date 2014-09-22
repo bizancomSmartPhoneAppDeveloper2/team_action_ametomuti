@@ -23,6 +23,10 @@
     BOOL isZero;//00:00:00を通過したかどうか、マイナスカウントを行うために必要
     BOOL isAction;//タイマーが動作中かどうか
     BOOL isMainasuThree;
+    
+    AVAudioPlayer *PreiseVoiceAV;
+    AVAudioPlayer *scoldVoiceAV;
+    AVAudioPlayer *ScaredScoldVoiceAV;
 }
 
 - (void)viewDidLoad
@@ -298,35 +302,58 @@
     self.startlabel.text = @"ミッションスタート";
 }
 
+
+
 -(void)PreiseVoice//賞賛音声の入れ物です。
 {
-    CFBundleRef maingundle = CFBundleGetMainBundle();
-    CFURLRef soundfileURLRef;
-    soundfileURLRef = CFBundleCopyResourceURL(maingundle, (CFStringRef)@"GoodJobMen",CFSTR("mp3"),NULL);
-    UInt32 soundID;
-    AudioServicesCreateSystemSoundID(soundfileURLRef, &soundID);
-    AudioServicesPlaySystemSound(soundID);
+    
+    NSString *bgmPath = [[NSBundle mainBundle]
+                         pathForResource:@"GoodJobMen" ofType:@"mp3"];
+    NSURL *bgmUrl = [NSURL fileURLWithPath:bgmPath];
+    PreiseVoiceAV = [[AVAudioPlayer alloc] initWithContentsOfURL:bgmUrl error:nil];
+    [ PreiseVoiceAV setNumberOfLoops:0]; // 0なら1回だけ。－1ならエンドレスリピート。
+    [NSThread sleepForTimeInterval:1];
+    [ PreiseVoiceAV play];
+    
+ 
 }
+
 
 -(void)ScoldVoice//叱責音声の入れ物です。
 {
-    CFBundleRef maingundle = CFBundleGetMainBundle();
-    CFURLRef soundfileURLRef;
-    soundfileURLRef = CFBundleCopyResourceURL(maingundle, (CFStringRef)@"WillBeOK",CFSTR("mp3"),NULL);
-    UInt32 soundID;
-    AudioServicesCreateSystemSoundID(soundfileURLRef, &soundID);
-    AudioServicesPlaySystemSound(soundID);
+    
+    NSString *bgmPath = [[NSBundle mainBundle]
+                         pathForResource:@"WillBeOK" ofType:@"mp3"];
+    NSURL *bgmUrl = [NSURL fileURLWithPath:bgmPath];
+    scoldVoiceAV = [[AVAudioPlayer alloc] initWithContentsOfURL:bgmUrl error:nil];
+    [scoldVoiceAV setNumberOfLoops:0]; // 0なら1回だけ。－1ならエンドレスリピート。
+    [NSThread sleepForTimeInterval:1];
+    [scoldVoiceAV play];
+    
+    
+    
+
+    
 }
+
+
 
 -(void)ScaredScoldVoice//叱責音声の入れ物です。
 {
-    CFBundleRef maingundle = CFBundleGetMainBundle();
-    CFURLRef soundfileURLRef;
-    soundfileURLRef = CFBundleCopyResourceURL(maingundle, (CFStringRef)@"YouNeedMoreEffort",CFSTR("mp3"),NULL);
-    UInt32 soundID;
-    AudioServicesCreateSystemSoundID(soundfileURLRef, &soundID);
-    AudioServicesPlaySystemSound(soundID);
+    
+    NSString *bgmPath = [[NSBundle mainBundle]
+                         pathForResource:@"YouNeedMoreEffort" ofType:@"mp3"];
+    NSURL *bgmUrl = [NSURL fileURLWithPath:bgmPath];
+    ScaredScoldVoiceAV = [[AVAudioPlayer alloc] initWithContentsOfURL:bgmUrl error:nil];
+    [ScaredScoldVoiceAV setNumberOfLoops:0]; // 0なら1回だけ。－1ならエンドレスリピート。
+    [NSThread sleepForTimeInterval:1];
+    [ScaredScoldVoiceAV play];
+    
+    
+
+    
 }
+
 
 //タイマー使用中に見せたい画面構成を準備
 -(void)isActionView{
