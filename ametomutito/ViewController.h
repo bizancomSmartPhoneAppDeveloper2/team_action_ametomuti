@@ -25,4 +25,14 @@
 - (IBAction)creabutton:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *creabuttonimage;
 @property (weak, nonatomic) IBOutlet UIButton *startbuttonimage;
+@property (weak, nonatomic) IBOutlet UIButton *threeminuts;
+@property (weak, nonatomic) IBOutlet UIButton *fiveminuts;
+@property (weak, nonatomic) IBOutlet UIButton *eirhtminuts;
+@property (weak, nonatomic) IBOutlet UIButton *trnminuts;
+@property (weak, nonatomic) IBOutlet UIButton *thirtyminuts;
+@property (weak, nonatomic) IBOutlet UIButton *ahour;
+@property (weak, nonatomic) IBOutlet UIButton *ahourandthirty;
+@property (weak, nonatomic) IBOutlet UIButton *twohours;
+@property (weak, nonatomic) IBOutlet UIButton *threehours;
+@property (weak, nonatomic) IBOutlet UIButton *fivehours;
 @end

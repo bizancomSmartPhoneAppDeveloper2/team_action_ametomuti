@@ -147,19 +147,23 @@
 {
     [timer invalidate];
     [self initialaiza];
-    [self defaultView];
+    //[self defaultView];
     [self PreiseVoice];
 }
 
 - (IBAction)btnB:(UIButton*)sender
 {
     [timer invalidate];
-    [self initialaiza];
-    [self defaultView];
-    if (isMainasuThree) {
-        [self ScaredScoldVoice];
-    }else
+    if (isMainasuThree == YES) {
         [self ScoldVoice];
+        NSLog(@"怒った声");
+    }else if(isMainasuThree == NO)
+        [self ScaredScoldVoice];
+        NSLog(@"励ます");
+
+    
+    [self initialaiza];
+    //[self defaultView];
 }
 
 - (IBAction)startbutton:(UIButton *)sender {
@@ -169,6 +173,7 @@
     //datepickerの値を取り出してラベルに表示
     [self valuecatched];
     [self animation];
+    [self isActionView];
     
     minuts = minute;
     hours = hour;
@@ -232,11 +237,8 @@
     
     if (isZero == NO && hours == 0 && minuts == 0 && seconds == 3) {
         [zero_audioPlayer play];
-    }else
-        nil;
-    
+    }
 }
-
 -(void)mainasucount{
     //マイナスカウントの場合は60秒になるまで1秒ずつ足して行く
     seconds++;
@@ -245,24 +247,29 @@
     if (seconds == 60) {
         //60秒になった場合
         if (minuts != 60) {
-            //分はまだ60になってない場合は1分足して0秒に戻してからまた1秒ずつ足して行く
+            //分はまだ60になってない場合は1分足して0秒に戻す
+            if (minuts == 2) {
+                isMainasuThree = YES;
+                NSLog(@"マイナス３分経過");
+                minuts++;
+                seconds = 0;
+                [self mainasushowtimerlabel];
+
+            }else
             minuts++;
-            seconds = 0;
-            [self mainasushowtimerlabel];
-            seconds++;
+                seconds = 0;
+                [self mainasushowtimerlabel];
             
         }else if (minuts == 60){
-            //分も60分の場合は１時間足して、0分0秒に戻してからまた1秒ずつ足して行く
+            //分も60分の場合は１時間足して、0分0秒に戻す
             hours++;
             minuts = 0;
             seconds = 0;
             [self mainasushowtimerlabel];
-            seconds++;
         }
     }
-    if (isZero == YES && hours == 0 && minuts == 0 && seconds == 3) {
-        isMainasuThree = YES;
-    }
+    
+   
 }
 
 -(void)showdatepickerview{
@@ -280,12 +287,15 @@
     components = [calender components:flags fromDate:self.datepicker.date];
     hour = components.hour;
     minute = components.minute;
-    NSLog(@"%ld時間 %ld分", hour, minute);
+    NSLog(@"%d時間 %d分", hour, minute);
 }
 
 -(void)showtimerlabel{
     //タイマーラベルを表示する
-    self.countdownlabel.text = [NSString stringWithFormat:@" %02ld %02ld %02ld",hours,minuts,seconds];
+    self.countdownlabel.textColor = [UIColor blueColor];
+    self.startlabel.textColor = [UIColor blueColor];
+    self.animationlabel.textColor = [UIColor blueColor];
+    self.countdownlabel.text = [NSString stringWithFormat:@" %02d %02d %02d",hours,minuts,seconds];
 }
 
 -(void)mainasushowtimerlabel{
@@ -295,7 +305,7 @@
     self.startlabel.textColor = [UIColor redColor];
     self.startlabel.text = @"ミッションピンチ！！";
     //マイナスのタイマーラベルを表示する
-    self.countdownlabel.text = [NSString stringWithFormat:@"-%02ld %02ld %02ld",hours,minuts,seconds];
+    self.countdownlabel.text = [NSString stringWithFormat:@"-%02d %02d %02d",hours,minuts,seconds];
 }
 
 -(void)showstartlabel{
@@ -311,7 +321,7 @@
                          pathForResource:@"GoodJobMen" ofType:@"mp3"];
     NSURL *bgmUrl = [NSURL fileURLWithPath:bgmPath];
     PreiseVoiceAV = [[AVAudioPlayer alloc] initWithContentsOfURL:bgmUrl error:nil];
-    [ PreiseVoiceAV setNumberOfLoops:0]; // 0なら1回だけ。－1ならエンドレスリピート。
+    //[ PreiseVoiceAV setNumberOfLoops:0]; // 0なら1回だけ。－1ならエンドレスリピート。
     [NSThread sleepForTimeInterval:1];
     [ PreiseVoiceAV play];
     
@@ -321,31 +331,23 @@
 
 -(void)ScoldVoice//叱責音声の入れ物です。
 {
-    
     NSString *bgmPath = [[NSBundle mainBundle]
-                         pathForResource:@"WillBeOK" ofType:@"mp3"];
+                         pathForResource:@"YouNeedMoreEffort" ofType:@"mp3"];
     NSURL *bgmUrl = [NSURL fileURLWithPath:bgmPath];
     scoldVoiceAV = [[AVAudioPlayer alloc] initWithContentsOfURL:bgmUrl error:nil];
-    [scoldVoiceAV setNumberOfLoops:0]; // 0なら1回だけ。－1ならエンドレスリピート。
+    //[scoldVoiceAV setNumberOfLoops:0]; // 0なら1回だけ。－1ならエンドレスリピート。
     [NSThread sleepForTimeInterval:1];
     [scoldVoiceAV play];
-    
-    
-    
-
-    
 }
-
-
 
 -(void)ScaredScoldVoice//叱責音声の入れ物です。
 {
     
     NSString *bgmPath = [[NSBundle mainBundle]
-                         pathForResource:@"YouNeedMoreEffort" ofType:@"mp3"];
+                         pathForResource:@"WillBeOK" ofType:@"mp3"];
     NSURL *bgmUrl = [NSURL fileURLWithPath:bgmPath];
     ScaredScoldVoiceAV = [[AVAudioPlayer alloc] initWithContentsOfURL:bgmUrl error:nil];
-    [ScaredScoldVoiceAV setNumberOfLoops:0]; // 0なら1回だけ。－1ならエンドレスリピート。
+    //[ScaredScoldVoiceAV setNumberOfLoops:0]; // 0なら1回だけ。－1ならエンドレスリピート。
     [NSThread sleepForTimeInterval:1];
     [ScaredScoldVoiceAV play];
     
@@ -365,6 +367,17 @@
     self.startbuttonimage.hidden = YES;
     self.creabuttonimage.hidden = NO;
     self.animationlabel.hidden = NO;
+    self.threeminuts.hidden = YES;
+    self.fiveminuts.hidden = YES;
+    self.eirhtminuts.hidden = YES;
+    self.trnminuts.hidden = YES;
+    self.thirtyminuts.hidden = YES;
+    self.ahour.hidden = YES;
+    self.ahourandthirty.hidden = YES;
+    self.twohours.hidden = YES;
+    self.threehours.hidden = YES;
+    self.fivehours.hidden = YES;
+
 }
 
 //デフォルトで見せたい画面構成を準備
@@ -378,6 +391,16 @@
     self.btnB.hidden = YES;
     self.startlabel.hidden = YES;
     self.animationlabel.hidden = YES;
+    self.threeminuts.hidden = NO;
+    self.fiveminuts.hidden = NO;
+    self.eirhtminuts.hidden = NO;
+    self.trnminuts.hidden = NO;
+    self.thirtyminuts.hidden = NO;
+    self.ahour.hidden = NO;
+    self.ahourandthirty.hidden = NO;
+    self.twohours.hidden = NO;
+    self.threehours.hidden = NO;
+    self.fivehours.hidden = NO;
 }
 
 //変数の初期化がたびたび必要なものをまとめるメソッド
@@ -387,6 +410,7 @@
     seconds = 0;
     isZero = 0;
     isAction = 0;
+    isMainasuThree = 0;
 }
 
 //時刻の間の：をアニメーションにする
@@ -406,7 +430,7 @@
 }
 
 -(IBAction)gobackhome:(UIStoryboardSegue *)segue{
-    
+    [self defaultView];
 }
 
 @end

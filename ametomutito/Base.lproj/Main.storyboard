@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -136,7 +136,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wh8-dV-kFt">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="580"/>
+                                <rect key="frame" x="0.0" y="148" width="320" height="432"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zg2-GA-y4h">
@@ -206,15 +206,25 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="ahour" destination="n1x-af-jBF" id="Bxd-DR-eW3"/>
+                        <outlet property="ahourandthirty" destination="DFT-gm-NDk" id="W51-I7-9gL"/>
                         <outlet property="animationlabel" destination="Lft-ZA-OQd" id="Ffl-Yf-2EY"/>
                         <outlet property="btnA" destination="xSQ-d6-zyS" id="sCI-vb-jiW"/>
                         <outlet property="btnB" destination="Cdx-VA-xX0" id="wQO-y5-l93"/>
                         <outlet property="countdownlabel" destination="zg2-GA-y4h" id="u70-dW-ZTI"/>
                         <outlet property="creabuttonimage" destination="BdE-Cc-T9k" id="4gh-8T-CZl"/>
                         <outlet property="datepicker" destination="Mwk-rw-4al" id="3kC-XA-6Mg"/>
+                        <outlet property="eirhtminuts" destination="OBh-Wf-lZw" id="Szo-Xg-01T"/>
+                        <outlet property="fivehours" destination="Cvw-4k-uq1" id="bDl-rg-26g"/>
+                        <outlet property="fiveminuts" destination="aW0-5e-SAY" id="v0N-IE-OPR"/>
                         <outlet property="imageview" destination="wh8-dV-kFt" id="9kK-FK-xxd"/>
                         <outlet property="startbuttonimage" destination="yGd-BJ-kvj" id="4cc-9V-IPY"/>
                         <outlet property="startlabel" destination="KP1-4K-mGc" id="Y3L-QZ-XZQ"/>
+                        <outlet property="thirtyminuts" destination="jk1-4J-lve" id="E0h-G2-hHG"/>
+                        <outlet property="threehours" destination="ltg-Zr-9ht" id="aiU-nv-7Iv"/>
+                        <outlet property="threeminuts" destination="TEX-ef-TIT" id="cc2-m5-yv1"/>
+                        <outlet property="trnminuts" destination="E3D-ai-GnQ" id="3qL-hM-10y"/>
+                        <outlet property="twohours" destination="o32-nq-IEp" id="wBf-G8-gxp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
